@@ -278,5 +278,16 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+    const SUPABASE_URL = 'https://cjgsxkqlslemhbyhdfll.supabase.co/rest/v1/';
+    const SUPABASE_KEY = 'tu-clave-anon';
+    const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+    // Aquí sigue el resto de la funcionalidad de tu landing
+    console.log("Conectado directamente desde el HTML");
+</script>
 </body>
 </html>
