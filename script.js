@@ -10,8 +10,8 @@ const misProductos = [
     { id: 2, title: "Seda", price: 45.000, image: "./seda.jpg" },
     { id: 3, title: "Lino", price: 35.000, image: "./lino.jpg" },
     { id: 4, title: "Antifluido", price: 45.000, image: "./antifluido.jpg" },
-    { id: 5, title: "Estilo Crochet1", price: 55.000, image: "./Crochet.jpeg" },
-    { id: 6, title: "Estilo Crochet2", price: 55.000, image: "./crochet2.jpeg" },
+    { id: 5, title: "Estilo Crochet", price: 55.000, image: "./Crochet.jpeg" },
+    { id: 6, title: "Estilo Crochet", price: 55.000, image: "./crochet2.jpeg" },
 ];
 
 const translations = {
