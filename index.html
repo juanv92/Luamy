@@ -8,7 +8,7 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="nav-container">
+        <section class="nav-container">
             <img src="logo1.jpeg" alt="Luamy" style="height: 60px; width: auto;">
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" data-key="nav-home">Inicio</a></li>
@@ -16,15 +16,15 @@
                 <li><a href="#about" data-key="nav-about">Sobre Nosotros</a></li>
                 <li><a href="#contact" data-key="nav-contact">Contacto</a></li>
             </ul>
-            <div class="nav-actions">
+            <section class="nav-actions">
                 <button id="lang-toggle" class="btn-secondary">EN</button>
                 <button id="theme-toggle" class="btn-secondary"><i class="fas fa-moon">🌓</i></button>
                 <div class="cart-icon" onclick="toggleCart()">
                     <i class="fas fa-shopping-cart">🛒</i>
                     <span id="cart-count">0</span>
                 </div>
-            </div>
-        </div>
+            </section>
+        </section>
     </nav>
 
     <section class="slider" id="home">
@@ -45,127 +45,128 @@
     </section>
 
     <section class="gallery-container" id="gallery">
-        <div class="gallery-grid" id="galleryGrid">
-            <div class="gallery-item tall" data-category="conjuntos">
+        <section class="gallery-grid" id="galleryGrid">
+
+            <figure class="gallery-item tall" data-category="conjuntos">
                 <img src="./Conjunto1.png" alt="Conjuntos Luamy">
-                <div class="gallery-overlay">
+                <figcaption class="gallery-overlay">
                     <h3 class="gallery-title" data-key="gal-t1">Conjuntos</h3>
                     <p class="gallery-category" data-key="gal-cat-maravillosos">Maravillosos</p>
-                </div>
-            </div>
+                </figcaption>
+            </figure>
 
-            <div class="gallery-item" data-category="conjuntos">
+            <figure class="gallery-item" data-category="conjuntos">
                 <img src="./Conjunto2.png" alt="Conjuntos de Gala">
-                <div class="gallery-overlay">
+                <figcaption class="gallery-overlay">
                     <h3 class="gallery-title" data-key="gal-t2">Conjuntos</h3>
                     <p class="gallery-category" data-key="gal-cat-gala">De Gala</p>
-                </div>
-            </div>
+                </figcaption>
+            </figure>
 
-            <div class="gallery-item" data-category="conjuntos">
+            <figure class="gallery-item" data-category="conjuntos">
                 <img src="./Conjunto3.png" alt="Estilo Personalizado">
-                <div class="gallery-overlay">
+                <figcaption class="gallery-overlay">
                     <h3 class="gallery-title" data-key="gal-t3">Conjuntos</h3>
                     <p class="gallery-category" data-key="gal-cat-estilo">Con Tu Estilo</p>
-                </div>
-            </div>
+                </figcaption>
+            </figure>
 
-            <div class="gallery-item" data-category="faldas">
+            <figure class="gallery-item" data-category="faldas">
                 <img src="./Faldas.png" alt="Faldas Elegantes">
-                <div class="gallery-overlay">
+                <figcaption class="gallery-overlay">
                     <h3 class="gallery-title" data-key="gal-t4">Faldas</h3>
                     <p class="gallery-category" data-key="gal-cat-elegantes">Elegantes</p>
-                </div>
-            </div>
+                </figcaption>
+            </figure>
 
-            <div class="gallery-item tall" data-category="novias">
+            <figure class="gallery-item tall" data-category="novias">
                 <img src="./Novia.png" alt="Vestidos de Novia">
-                <div class="gallery-overlay">
+                <figcaption class="gallery-overlay">
                     <h3 class="gallery-title" data-key="gal-t5">Novias</h3>
                     <p class="gallery-category" data-key="gal-cat-unicas">Únicas</p>
-                </div>
-            </div>
+                </figcaption>
+            </figure>
 
-            <div class="gallery-item" data-category="gabanes">
+            <figure class="gallery-item" data-category="gabanes">
                 <img src="./Gaban1.png" alt="Gabanes Exclusivos">
-                <div class="gallery-overlay">
+                <figcaption class="gallery-overlay">
                     <h3 class="gallery-title" data-key="gal-t6">Gabanes</h3>
                     <p class="gallery-category" data-key="gal-cat-diferentes">Diferentes</p>
-                </div>
-            </div>
+                </figcaption>
+            </figure>
 
-            <div class="gallery-item" data-category="gabanes">
-                <img src="/Gaban2.png" alt="Gabanes Elegantes">
-                <div class="gallery-overlay">
+            <figure class="gallery-item" data-category="gabanes">
+                <img src="./Gaban2.png" alt="Gabanes Elegantes">
+                <figcaption class="gallery-overlay">
                     <h3 class="gallery-title" data-key="gal-t7">Gabanes</h3>
                     <p class="gallery-category" data-key="gal-cat-elegantes-2">Elegantes</p>
-                </div>
-            </div>
+                </figcaption>
+            </figure>
 
-            <div class="gallery-item tall" data-category="hombres">
+            <figure class="gallery-item tall" data-category="hombres">
                 <img src="./Hombre.png" alt="Moda Masculina">
-                <div class="gallery-overlay">
+                <figcaption class="gallery-overlay">
                     <h3 class="gallery-title" data-key="gal-t8">Para</h3>
                     <p class="gallery-category" data-key="gal-cat-hombres">Hombres</p>
-                </div>
-            </div>
+                </figcaption>
+            </figure>
 
-            <div class="gallery-item" data-category="faldas">
+            <figure class="gallery-item" data-category="faldas">
                 <img src="./Faldas2.png" alt="Faldas Casuales">
-                <div class="gallery-overlay">
+                <figcaption class="gallery-overlay">
                     <h3 class="gallery-title" data-key="gal-t9">Faldas</h3>
                     <p class="gallery-category" data-key="gal-cat-casuales">Casuales</p>
-                </div>
-            </div>
+                </figcaption>
+            </figure>
 
-            <div class="gallery-item" data-category="novias">
+            <figure class="gallery-item" data-category="novias">
                 <img src="./Novia.png" alt="Eventos Matrimonios">
-                <div class="gallery-overlay">
+                <figcaption class="gallery-overlay">
                     <h3 class="gallery-title" data-key="gal-t10">Para</h3>
                     <p class="gallery-category" data-key="gal-cat-matrimonios">Matrimonios</p>
-                </div>
-            </div>
+                </figcaption>
+            </figure>
 
-            <div class="gallery-item" data-category="vestidos">
+            <figure class="gallery-item" data-category="vestidos">
                 <img src="./Vestido1.png" alt="Vestidos Únicos">
-                <div class="gallery-overlay">
+                <figcaption class="gallery-overlay">
                     <h3 class="gallery-title" data-key="gal-t11">Vestidos</h3>
                     <p class="gallery-category" data-key="gal-cat-unicos">Únicos</p>
-                </div>
-            </div>
+                </figcaption>
+            </figure>
 
-            <div class="gallery-item" data-category="infantil">
+            <figure class="gallery-item" data-category="infantil">
                 <img src="./Infantil.png" alt="Moda Infantil">
-                <div class="gallery-overlay">
+                <figcaption class="gallery-overlay">
                     <h3 class="gallery-title" data-key="gal-t12">Estilo</h3>
                     <p class="gallery-category" data-key="gal-cat-infantil">Infantil</p>
-                </div>
-            </div>
-        </div>
+                </figcaption>
+            </figure>
+        </section>
     </section>
     <main class="container">
         <h2 data-key="cat-title">Categorías</h2>
         <section id="products-grid" class="products-grid"></section>
     </main>
-    <div id="login-modal" class="cart-modal">
-        <div class="cart-content">
+    <section id="login-modal" class="cart-modal">
+        <article class="cart-content">
             <span class="close" onclick="toggleLogin()">&times;</span>
             <h2 data-key="login-title">Iniciar Sesión</h2>
             <p style="margin-bottom: 20px; font-size: 0.9em; opacity: 0.8;">Por favor, ingresa para gestionar tu carrito.</p>
             
             <form id="login-form">
-                <div class="form-group">
+                <section class="form-group">
                     <label for="login-email">Usuario o Email</label>
                     <input type="text" id="login-email" required>
-                </div>
-                <div class="form-group">
+                </section>
+                <section class="form-group">
                     <label for="login-pass">Contraseña</label>
                     <input type="password" id="login-pass" required>
-                </div>
+                </section>
                 <button type="submit" class="btn-checkout" style="width: 100%; margin-top: 10px;">Ingresar</button>
             </form>
-        </div>
-    </div>
+        </article>
+    </section>
 
     <div id="cart-modal" class="cart-modal">
         <div class="cart-content">
@@ -302,16 +303,5 @@
     </footer>
 
     <script src="script.js"></script>
-    <div id="lightbox" class="lightbox">
-        <span class="close-lightbox">&times;</span>
-        <div class="lightbox-content-wrapper">
-            <img id="lightbox-img" src="" alt="Vista ampliada">
-        </div>
-        <div class="lightbox-controls">
-            <button id="zoom-in">🔍+</button>
-            <button id="zoom-out">🔍-</button>
-            <button id="reset-zoom">Reset</button>
-        </div>
-    </div>
 </body>
 </html>
