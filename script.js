@@ -14,6 +14,14 @@ const misProductos = [
     { id: 6, title: "Estilo crochet2", price: 65.000, image: "./crochet2.jpeg" },
     { id: 7, title: "Estilo con Herraje", price: 15.000, image: "./herrajes.jpeg" },
     { id: 8, title: "Estilo con Encaje", price: 20.000, image: "./encajes.jpeg" },
+    { id: 9, title: "Pantalon", price: 70.000, image: "./Pantalon.png" },
+    { id: 10, title: "Falda", price: 50.000, image: "./FaldasConj.png" },
+    { id: 11, title: "Camisa de Hombre", price: 60.000, image: "./CamisasHombre.png" },
+    { id: 12, title: "Blusa de Mujer", price: 50.000, image: "./BlusasMujer.png" },
+    { id: 13, title: "Vestido", price: 80.000, image: "./Vestidos.png" },
+    { id: 14, title: "Enterizo", price: 80.000, image: "./Enterizos.png" },
+    { id: 15, title: "Vestido de Novia", price: 300.000, image: "./Novia3.png" },
+
 ];
 
 const translations = {
