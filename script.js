@@ -11,7 +11,9 @@ const misProductos = [
     { id: 3, title: "Lino", price: 35.000, image: "./lino.jpg" },
     { id: 4, title: "Antifluido", price: 45.000, image: "./antifluido.jpg" },
     { id: 5, title: "Estilo Crochet", price: 55.000, image: "./Crochet.jpeg" },
-    { id: 6, title: "Estilo Crochet", price: 55.000, image: "./crochet2.jpeg" },
+    { id: 6, title: "Estilo crochet2", price: 65.000, image: "./crochet2.jpeg" },
+    { id: 7, title: "Estilo con Herraje", price: 15.000, image: "./herrajes.jpeg" },
+    { id: 8, title: "Estilo con Encaje", price: 20.000, image: "./encajes.jpeg" },
 ];
 
 const translations = {
