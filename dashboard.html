@@ -1,147 +1,132 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="light">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | Luamy Taller</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .dashboard-container { 
-            padding: 40px 5%; 
-            max-width: 1200px; 
-            margin: 0 auto; 
-            min-height: 80vh;
+        body { 
+            font-family: sans-serif; 
+            margin: 0; 
+            background: #f4f4f4; 
         }
         .admin-nav { 
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
-            padding: 15px 5%; 
-            background-color: var(--nav-bg, #ffffff); 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+            padding: 10px 5%; 
+            background: white; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
         }
-        .admin-header { 
-            border-bottom: 2px solid var(--border-color, #eee); 
-            padding-bottom: 15px; 
-            margin-bottom: 30px; 
-            margin-top: 20px;
+        .dashboard-container { 
+            padding: 30px 5%; 
+            max-width: 1100px; 
+            margin: 0 auto; 
         }
         .form-add-product { 
-            background-color: var(--card-bg, #f9f9f9); 
+            background: white; 
             padding: 25px; 
             border-radius: 12px; 
-            margin-bottom: 40px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03); 
+            margin-bottom: 30px; 
         }
-        .form-add-product h3 { margin-bottom: 20px; }
         .form-group-inline { 
             display: flex; 
-            gap: 15px; 
-            flex-wrap: wrap; 
+            gap: 10px; 
+            flex-wrap: wrap;
             margin-bottom: 15px; 
         }
-        .form-add-product input, 
-        .form-add-product select { 
-            padding: 12px; 
-            border: 1px solid var(--border-color, #ccc); 
-            border-radius: 8px; 
+        input, select { 
+            padding: 10px; 
+            border: 1px solid #ddd; 
+            border-radius: 5px; 
             flex: 1; 
-            min-width: 200px; 
-            background-color: var(--input-bg, #fff);
+            min-width: 150px; 
         }
         .grid-container { 
             display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
-            gap: 25px; 
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+            gap: 20px; 
         }
         .product-card { 
-            background: var(--card-bg, #fff); 
+            background: white; 
             padding: 15px; 
             border-radius: 10px; 
             text-align: center; 
-            border: 1px solid var(--border-color, #eee); 
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04); 
         }
         .product-card img { 
             width: 100%; 
-            height: 250px; 
+            height: 200px; 
             object-fit: cover; 
-            border-radius: 8px; 
-            margin-bottom: 15px; 
+            border-radius: 5px; 
         }
         .btn-danger { 
-            background-color: #e74c3c; 
+            background: #e74c3c; 
             color: white; 
             border: none; 
-            padding: 10px; 
-            border-radius: 5px; 
+            padding: 8px; 
+            width: 100%; 
             cursor: pointer; 
-            width: 100%;
-            font-weight: bold;
+            border-radius: 5px; 
+            margin-top: 10px; 
         }
-        .loading-overlay {
-            display: none;
-            color: #666;
-            font-style: italic;
-            margin-bottom: 10px;
+        .btn-primary { 
+            background: #333; 
+            color: white; 
+            padding: 10px 20px; 
+            border: none; 
+            cursor: pointer; 
+            border-radius: 5px; 
+        }
+        #upload-status { 
+            color: blue; 
+            display: none; 
+            font-weight: bold; 
         }
     </style>
 </head>
 <body>
     <nav class="admin-nav">
-        <img src="logo2.jpeg" alt="Luamy Taller" style="height: 60px; border-radius: 4px;">
-        <button onclick="cerrarSesion()" class="btn-primary" style="padding: 10px 20px; margin: 0;">Cerrar Sesión</button>
+        <img src="logo2.jpeg" alt="Luamy" style="height: 50px;">
+        <button onclick="cerrarSesion()" class="btn-primary">Cerrar Sesión</button>
     </nav>
 
-    <section class="dashboard-container">
-        <figure class="admin-header">
-            <h2>Gestión de Inventario</h2>
-        </figure>
-
-        <!-- Formulario para agregar productos -->
-        <figure class="form-add-product">
-            <h3>Agregar Nueva Prenda</h3>
+    <article class="dashboard-container">
+        <article class="form-add-product">
+            <h3>Nueva Prenda</h3>
             <form id="productForm">
-                <figure class="form-group-inline">
-                    <input type="text" id="prodName" placeholder="Nombre de la prenda" required>
-                    <input type="number" id="prodPrice" placeholder="Precio (COP)" required>
+                <article class="form-group-inline">
+                    <input type="text" id="prodName" placeholder="Nombre" required>
+                    <input type="number" id="prodPrice" placeholder="Precio COP" required>
                     <select id="prodCategory" required>
                         <option value="">Categoría...</option>
                         <option value="conjuntos">Conjuntos</option>
                         <option value="faldas">Faldas</option>
                         <option value="novias">Novias</option>
-                        <option value="gabanes">Gabanes</option>
-                        <option value="hombres">Hombres</option>
                     </select>
-                </figure>
-                <figure class="form-group-inline" style="align-items: center;">
+                </article>
+                <article class="form-group-inline">
                     <input type="file" id="prodImage" accept="image/*" required>
-                    <button type="submit" class="btn-primary" id="uploadBtn" style="padding: 12px 25px;">Subir a la Tienda</button>
-                </figure>
-                <p id="upload-status" class="loading-overlay">Subiendo producto...</p>
+                    <button type="submit" id="uploadBtn" class="btn-primary">Subir Producto</button>
+                </article>
+                <p id="upload-status">Subiendo, por favor espera...</p>
             </form>
-        </figure>
+        </article>
 
-        <h3 style="margin-bottom: 25px;">Productos en Base de Datos</h3>
-        <figure class="grid-container" id="admin-grid">
-            <!-- Los productos se cargarán aquí dinámicamente -->
-            <p id="loading-msg">Cargando inventario...</p>
-        </figure>
-    </section>
+        <h3>Inventario</h3>
+        <article class="grid-container" id="admin-grid"></article>
+    </article>
 
-    <!-- Supabase Library -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    
     <script>
-        // CONFIGURACIÓN SUPABASE (Usa los mismos datos del login)
-        const supabaseUrl = 'https://TU-PROYECTO-ID.supabase.co';
-        const supabaseKey = 'TU-ANON-KEY-PUBLICA';
+        const supabaseUrl = 'https://TU_PROYECTO_ID.supabase.co';
+        const supabaseKey = 'TU_ANON_KEY';
         const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
         const adminGrid = document.getElementById('admin-grid');
         const productForm = document.getElementById('productForm');
 
-        // 1. Proteger la ruta
+        // 1. Proteger ruta
         async function checkAuth() {
             const { data: { session } } = await supabase.auth.getSession();
             if (!session) {
@@ -151,112 +136,85 @@
             }
         }
 
-        // 2. Cerrar Sesión
+        // 2. Cerrar sesión
         async function cerrarSesion() {
             await supabase.auth.signOut();
-            localStorage.removeItem("luamy_auth");
             window.location.href = "login.html";
         }
 
-        // 3. Obtener productos de la base de datos
+        // 3. Cargar productos
         async function fetchProducts() {
             adminGrid.innerHTML = '<p>Cargando...</p>';
-            const { data: productos, error } = await supabase
-                .from('productos')
-                .select('*')
-                .order('created_at', { ascending: false });
-
-            if (error) {
-                console.error('Error:', error);
-                adminGrid.innerHTML = '<p>Error al cargar productos.</p>';
-                return;
-            }
-
+            const { data, error } = await supabase.from('productos').select('*').order('created_at', { ascending: false });
+            
+            if (error) return alert("Error al cargar");
+            
             adminGrid.innerHTML = '';
-            productos.forEach(prod => {
-                const card = document.createElement('div');
-                card.className = 'product-card';
-                card.innerHTML = `
-                    <img src="${prod.image_url}" alt="${prod.nombre}">
-                    <p>${prod.nombre}<br>$${Number(prod.precio).toLocaleString()}</p>
-                    <button class="btn-danger" onclick="deleteProduct(${prod.id}, '${prod.image_path}')">Eliminar</button>
+            data.forEach(prod => {
+                adminGrid.innerHTML += `
+                    <article class="product-card">
+                        <img src="${prod.image_url}">
+                        <p><strong>${prod.nombre}</strong><br>$${Number(prod.precio).toLocaleString()}</p>
+                        <button class="btn-danger" onclick="deleteProduct(${prod.id}, '${prod.image_path}')">Eliminar</button>
+                    </article>
                 `;
-                adminGrid.appendChild(card);
             });
         }
 
-        // 4. Subir nuevo producto (Imagen + Datos)
+        // 4. Subir producto
         productForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const status = document.getElementById('upload-status');
             const btn = document.getElementById('uploadBtn');
+            const status = document.getElementById('upload-status');
             
             const file = document.getElementById('prodImage').files[0];
             const nombre = document.getElementById('prodName').value;
             const precio = document.getElementById('prodPrice').value;
             const categoria = document.getElementById('prodCategory').value;
 
-            status.style.display = 'block';
             btn.disabled = true;
+            status.style.display = "block";
 
-            // A. Subir Imagen al Storage
+            // Subir imagen
             const fileName = `${Date.now()}_${file.name}`;
-            const { data: uploadData, error: uploadError } = await supabase.storage
+            const { data: storageData, error: storageError } = await supabase.storage
                 .from('product-images')
                 .upload(fileName, file);
 
-            if (uploadError) {
+            if (storageError) {
                 alert("Error al subir imagen");
-                console.error(uploadError);
+                btn.disabled = false;
                 return;
             }
 
-            // B. Obtener URL pública de la imagen
-            const { data: urlData } = supabase.storage
-                .from('product-images')
-                .getPublicUrl(fileName);
+            // Obtener URL
+            const { data: urlData } = supabase.storage.from('product-images').getPublicUrl(fileName);
 
-            // C. Guardar en la tabla 'productos'
-            const { error: dbError } = await supabase
-                .from('productos')
-                .insert([{ 
-                    nombre, 
-                    precio, 
-                    categoria, 
-                    image_url: urlData.publicUrl,
-                    image_path: fileName 
-                }]);
+            // Guardar en DB
+            const { error: dbError } = await supabase.from('productos').insert([{
+                nombre, precio, categoria, image_url: urlData.publicUrl, image_path: fileName
+            }]);
 
-            if (dbError) {
-                alert("Error al guardar en base de datos");
-            } else {
+            if (dbError) alert("Error en base de datos");
+            else {
                 productForm.reset();
                 fetchProducts();
             }
 
-            status.style.display = 'none';
             btn.disabled = false;
+            status.style.display = "none";
         });
 
-        // 5. Eliminar Producto
+        // 5. Eliminar
         async function deleteProduct(id, path) {
-            if (!confirm("¿Seguro que quieres eliminar esta prenda?")) return;
+            if (!confirm("¿Eliminar prenda?")) return;
 
-            // Borrar de la base de datos
-            const { error: dbError } = await supabase
-                .from('productos')
-                .delete()
-                .eq('id', id);
-
-            // Borrar imagen del storage
-            await supabase.storage
-                .from('product-images')
-                .remove([path]);
+            const { error: dbError } = await supabase.from('productos').delete().eq('id', id);
+            await supabase.storage.from('product-images').remove([path]);
 
             if (!dbError) fetchProducts();
         }
 
-        // Iniciar validación
         checkAuth();
     </script>
 </body>

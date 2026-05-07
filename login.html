@@ -4,161 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login | Luamy Taller</title>
-    <!-- Se vincula a tu archivo CSS principal -->
     <link rel="stylesheet" href="style.css">
     <style>
-        .login-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: var(--bg-color, #f8f9fa); 
-            padding: 20px;
+        .login-container { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            background-color: #f8f9fa; 
+            padding: 20px; 
         }
-        .login-box {
-            background-color: var(--card-bg, #ffffff);
-            padding: 40px;
-            border-radius: 15px;
-            width: 100%;
-            max-width: 400px;
-            text-align: center;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
+        .login-box { 
+            background-color: #ffffff; 
+            padding: 40px; 
+            border-radius: 15px; 
+            width: 100%; 
+            max-width: 400px; 
+            text-align: center; 
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); 
         }
-        .login-box h2 {
-            margin-bottom: 25px;
-            color: var(--text-color, #333);
+        .input-group { 
+            margin-bottom: 20px; 
+            text-align: left; 
         }
-        .input-group {
-            margin-bottom: 20px;
-            text-align: left;
+        .input-group label { 
+            display: block; 
+            margin-bottom: 8px; 
+            font-weight: 500; 
         }
-        .input-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: var(--text-color, #555);
+        .input-group input { 
+            width: 100%; 
+            padding: 12px; 
+            border-radius: 8px; 
+            border: 1px solid #ddd; 
+            box-sizing: border-box; 
         }
-        .input-group input {
-            width: 100%;
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid var(--border-color, #ddd);
-            background-color: var(--input-bg, #fff);
-            color: var(--text-color, #333);
-            font-family: inherit;
-            transition: border-color 0.3s;
-            box-sizing: border-box;
+        .btn-login { 
+            width: 100%; 
+            padding: 14px; 
+            font-size: 16px; 
+            border: none; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            background-color: #333; 
+            color: white; 
         }
-        .input-group input:focus {
-            outline: none;
-            border-color: #666; 
+        .btn-login:disabled { 
+            opacity: 0.7; 
         }
-        .btn-login {
-            width: 100%;
-            padding: 14px;
-            font-size: 16px;
-            margin-top: 10px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: opacity 0.3s;
+        .back-link { 
+            display: block; 
+            margin-top: 25px; 
+            color: #777; 
+            text-decoration: none; 
+            font-size: 14px; 
         }
-        .btn-login:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
-        }
-        .back-link {
-            display: block;
-            margin-top: 25px;
-            color: var(--text-color, #777);
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.3s;
-        }
-        .back-link:hover {
-            text-decoration: underline;
-        }
-
-        /* Soporte para modo oscuro */
-        [data-theme="dark"] .login-container { background-color: #121212; }
-        [data-theme="dark"] .login-box { background-color: #1e1e1e; box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05); }
-        [data-theme="dark"] .login-box h2, [data-theme="dark"] .input-group label { color: #f1f1f1; }
-        [data-theme="dark"] .input-group input { background-color: #2c2c2c; border-color: #444; color: #fff; }
     </style>
 </head>
 <body>
-    <sction class="login-container">
-        <figure class="login-box">
-            <img src="logo2.jpeg" alt="Luamy" style="height: 70px; width: auto; margin-bottom: 15px; border-radius: 5px;">
-            <h2 data-key="login-title">Panel de Control</h2>
-            
+    <section class="login-container">
+        <article class="login-box">
+            <img src="logo2.jpeg" alt="Luamy" style="height: 70px; margin-bottom: 15px; border-radius: 5px;">
+            <h2>Panel de Control</h2>
             <form id="loginForm">
-                <figure class="input-group">
-                    <label data-key="login-email">Correo Electrónico</label>
+                <article class="input-group">
+                    <label>Correo Electrónico</label>
                     <input type="email" id="email" required placeholder="admin@luamy.com">
-                </figure>
-                <figure class="input-group">
-                    <label data-key="login-pass">Contraseña</label>
+                </article>
+                <article class="input-group">
+                    <label>Contraseña</label>
                     <input type="password" id="password" required placeholder="••••••••">
-                </figure>
-                <button type="submit" class="btn-primary btn-login" id="submitBtn" data-key="login-btn">Ingresar</button>
+                </article>
+                <button type="submit" class="btn-login" id="submitBtn">Ingresar</button>
             </form>
-            
-            <p id="error-msg" style="color: #e74c3c; display: none; margin-top: 15px; font-weight: 600; font-size: 14px;" data-key="login-error">Credenciales incorrectas</p>
-            
-            <a href="index.html" class="back-link" data-key="login-back">← Volver al inicio</a>
-        </figure>
+            <p id="error-msg" style="color: #e74c3c; display: none; margin-top: 15px; font-weight: 600;"></p>
+            <a href="index.html" class="back-link">← Volver al inicio</a>
+        </article>
     </section>
 
-    <!-- 1. Importar librería de Supabase por CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    
     <script>
-        // 2. Inicializar cliente de Supabase
-        // IMPORTANTE: Reemplaza estas dos variables con las de tu proyecto en Supabase (Settings > API)
-        const supabaseUrl = 'https://TU-PROYECTO-ID.supabase.co';
-        const supabaseKey = 'TU-ANON-KEY-PUBLICA';
-        
-        // Crear la instancia del cliente
-        const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
+        // CONFIGURACIÓN
+        const supabaseUrl = 'https://TU_PROYECTO_ID.supabase.co';
+        const supabaseKey = 'TU_ANON_KEY';
+        const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
-        document.getElementById('loginForm').addEventListener('submit', async function(e) {
+        const loginForm = document.getElementById('loginForm');
+        const errorMsg = document.getElementById('error-msg');
+        const submitBtn = document.getElementById('submitBtn');
+
+        loginForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            
-            const emailValue = document.getElementById('email').value;
-            const passValue = document.getElementById('password').value;
-            const errorMsg = document.getElementById('error-msg');
-            const submitBtn = document.getElementById('submitBtn');
-
-            // Feedback visual: deshabilitar botón mientras carga
-            submitBtn.innerText = "Ingresando...";
-            submitBtn.disabled = true;
             errorMsg.style.display = "none";
+            submitBtn.innerText = "Verificando...";
+            submitBtn.disabled = true;
 
-            // 3. Autenticación con Supabase
-            const { data, error } = await supabaseClient.auth.signInWithPassword({
-                email: emailValue,
-                password: passValue,
-            });
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            const { data, error } = await supabase.auth.signInWithPassword({ email, password });
 
             if (error) {
-                // Si hay error, mostramos el mensaje y reactivamos el botón
-                errorMsg.innerText = "Credenciales incorrectas. Intenta de nuevo.";
+                errorMsg.innerText = "Error: " + error.message;
                 errorMsg.style.display = "block";
                 submitBtn.innerText = "Ingresar";
                 submitBtn.disabled = false;
-                
-                // Ocultar mensaje de error después de 4 segundos
-                setTimeout(() => {
-                    errorMsg.style.display = "none";
-                }, 4000);
             } else {
-                // Login exitoso
-                localStorage.setItem("luamy_auth", "true");
+                // Supabase guarda la sesión automáticamente en LocalStorage
                 window.location.href = "dashboard.html";
             }
         });
+
+        // Si ya está logueado, mandarlo al dashboard directamente
+        async function checkSession() {
+            const { data } = await supabase.auth.getSession();
+            if (data.session) window.location.href = "dashboard.html";
+        }
+        checkSession();
     </script>
 </body>
 </html>
