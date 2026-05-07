@@ -38,6 +38,20 @@ const translations = {
         "contact-title": "Ponte en Contacto", "contact-subtitle": "Trabajemos juntos",
         "form-name": "Nombre", "form-email": "Correo Electrónico", "form-message": "Mensaje", "form-btn": "Enviar Mensaje",
         "loc-text": "Bogotá, Colombia"
+
+        // --- GALERÍA (Actualizada) ---
+        "gal-t1": "Conjuntos", "gal-cat-maravillosos": "Maravillosos",
+        "gal-t2": "Conjuntos", "gal-cat-gala": "De Gala",
+        "gal-t3": "Conjuntos", "gal-cat-estilo": "Con Tu Estilo",
+        "gal-t4": "Faldas", "gal-cat-elegantes": "Elegantes",
+        "gal-t5": "Novias", "gal-cat-unicas": "Únicas",
+        "gal-t6": "Gabanes", "gal-cat-diferentes": "Diferentes",
+        "gal-t7": "Gabanes", "gal-cat-elegantes-2": "Elegantes",
+        "gal-t8": "Para", "gal-cat-hombres": "Hombres",
+        "gal-t9": "Faldas", "gal-cat-casuales": "Casuales",
+        "gal-t10": "Para", "gal-cat-matrimonios": "Matrimonios",
+        "gal-t11": "Vestidos", "gal-cat-unicos": "Únicos",
+        "gal-t12": "Estilo", "gal-cat-infantil": "Infantil"
     },
     en: {
         "nav-home": "Home", "nav-gallery": "Gallery", "nav-about": "About", "nav-contact": "Contact",
@@ -52,6 +66,20 @@ const translations = {
         "contact-title": "Get in Touch", "contact-subtitle": "Let's work together",
         "form-name": "Name", "form-email": "Email", "form-message": "Message", "form-btn": "Send Message",
         "loc-text": "Bogota, Colombia"
+
+        // --- GALLERY (Updated) ---
+        "gal-t1": "Outfits", "gal-cat-maravillosos": "Wonderful",
+        "gal-t2": "Outfits", "gal-cat-gala": "Gala Wear",
+        "gal-t3": "Outfits", "gal-cat-estilo": "Your Style",
+        "gal-t4": "Skirts", "gal-cat-elegantes": "Elegant",
+        "gal-t5": "Brides", "gal-cat-unicas": "Unique",
+        "gal-t6": "Coats", "gal-cat-diferentes": "Distinctive",
+        "gal-t7": "Coats", "gal-cat-elegantes-2": "Elegant",
+        "gal-t8": "For", "gal-cat-hombres": "Men",
+        "gal-t9": "Skirts", "gal-cat-casuales": "Casual",
+        "gal-t10": "For", "gal-cat-matrimonios": "Weddings",
+        "gal-t11": "Dresses", "gal-cat-unicos": "Unique",
+        "gal-t12": "Style", "gal-cat-infantil": "Kids"
     }
 };
 
